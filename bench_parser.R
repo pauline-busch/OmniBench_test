@@ -11,10 +11,9 @@ parser$add_argument("--data.matrix",
                     required = TRUE, 
                     help = "the actual data to cluster (this is specific to this `stage` contract)")
 
-# parser$add_argument("--data.true_labels", 
-#                     type "character",
-#                     required = TRUE, 
-#                     help = "the true partitioning  (this is specific to this `stage` contract)")
+parser$add_argument("--data.true_labels", 
+                     required = TRUE, 
+                     help = "the true partitioning  (this is specific to this `stage` contract)")
 
 parser$add_argument("--output_dir", 
                     type = "character", 

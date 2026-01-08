@@ -1,0 +1,11 @@
+# outputs
+manual_run_output/
+
+# local conda envs / test artefacts
+bench_test/
+bench_test.yml
+
+# editor / misc
+*.log
+.Rhistory
+.RData
