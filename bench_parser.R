@@ -45,7 +45,7 @@ mat <- fread(args$data.matrix)
 out_dir <- dir.create(args$output_dir)
 
 n_runs <- 5
-n <- nrow = nrow(mat)
+n <- nrow(mat)
 labels_mat <- matrix(NA_integer_, n, ncol = n_runs)
 
 for (i in seq_len(n_runs)) {
@@ -57,7 +57,7 @@ colnames(labels_mat) <- paste0("run=", seq_len(n_runs))
 #clusters <- sample(1:5, nrow(mat), replace = TRUE)
 #mat_clustered <- cbind(mat, clusters)
 
-df <- data.frame(mat_clustered)
+df <- data.frame(labels_mat)
 gz <- gzfile(file.path(args$output_dir, paste0(args$name, "_ks_range.labels.gz")), "w")
 write.table(file = gz, df, col.names = TRUE, row.names = FALSE, sep = ",")
 close(gz)
