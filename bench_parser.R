@@ -45,7 +45,8 @@ mat <- fread(args$data.matrix)
 out_dir <- dir.create(args$output_dir)
 
 n_runs <- 5
-labels_mat <- matrix(NA_integer_, nrow = nrow(mat), ncol = n_runs)
+n <- nrow = nrow(mat)
+labels_mat <- matrix(NA_integer_, n, ncol = n_runs)
 
 for (i in seq_len(n_runs)) {
   labels_mat[, i] <- sample(1:3, n, replace = TRUE)
